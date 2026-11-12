@@ -5,7 +5,7 @@ import {
 } from 'lucide-react';
 import { useClinic } from '../useClinic';
 
-export default function Services({ setPage }) {
+export default function Services() {
   const clinic = useClinic();
   const serviceCategories = [
     {
@@ -207,12 +207,14 @@ export default function Services({ setPage }) {
                           <ShieldCheck className="w-3.5 h-3.5 text-brand-accent" />
                           Honest Assessment
                         </span>
-                        <button
-                          onClick={() => setPage('contact')}
+                        <a
+                          href={clinic.bookingPortal || '#'}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-xs font-bold text-brand-accent hover:text-brand-accentHover flex items-center gap-1"
                         >
-                          Book Visit &rarr;
-                        </button>
+                          Book Now &rarr;
+                        </a>
                       </div>
                     </div>
                   ))}
@@ -237,12 +239,14 @@ export default function Services({ setPage }) {
             Treatment quotes are tailored to your actual dental needs following a consultation—with flexible payment options including {clinic.payments.join(', ')}.
           </p>
           <div className="pt-4 flex flex-wrap justify-center gap-4">
-            <button
-              onClick={() => setPage('contact')}
-              className="bg-brand-dark hover:bg-slate-800 text-brand-gold font-bold px-8 py-3.5 rounded-xl shadow-md transition-all"
+            <a
+              href={clinic.bookingPortal || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-dark hover:opacity-90 text-brand-gold font-bold px-8 py-3.5 rounded-xl shadow-md transition-all"
             >
-              Book Consultation Online
-            </button>
+              Book Now
+            </a>
             <a
               href={`tel:${clinic.phoneIntl}`}
               className="bg-white border border-brand-silver hover:bg-brand-light text-brand-dark font-bold px-8 py-3.5 rounded-xl transition-all"

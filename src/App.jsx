@@ -161,12 +161,16 @@ function AppShell({ clinic }) {
                 </div>
                 <span>{clinic.phoneDisplay}</span>
               </a>
-              <button
-                onClick={() => setPage('contact')}
-                className="bg-brand-dark hover:opacity-90 text-brand-gold border border-brand-gold/40 text-xs font-bold px-5 py-3 rounded-xl transition-all shadow-sm"
+              <a
+                href={clinic.bookingPortal || '#contact'}
+                target={clinic.bookingPortal ? '_blank' : undefined}
+                rel={clinic.bookingPortal ? 'noopener noreferrer' : undefined}
+                onClick={clinic.bookingPortal ? undefined : (e) => { e.preventDefault(); setPage('contact'); }}
+                className="bg-brand-dark hover:opacity-90 text-brand-gold border border-brand-gold/40 text-xs font-bold px-5 py-3 rounded-xl transition-all shadow-sm inline-flex items-center gap-1.5"
               >
-                Book Appointment
-              </button>
+                Book Now
+                {clinic.bookingPortal && <ExternalLink className="w-3.5 h-3.5" />}
+              </a>
             </div>
 
             <div className="flex md:hidden items-center gap-3">
@@ -211,9 +215,16 @@ function AppShell({ clinic }) {
                 <Phone className="w-4 h-4 text-brand-gold" />
                 Call / Text: {clinic.phoneDisplay}
               </a>
-              <button onClick={() => setPage('contact')} className="w-full bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-3.5 rounded-xl text-sm shadow-md">
-                Book Appointment Now
-              </button>
+              <a
+                href={clinic.bookingPortal || '#contact'}
+                target={clinic.bookingPortal ? '_blank' : undefined}
+                rel={clinic.bookingPortal ? 'noopener noreferrer' : undefined}
+                onClick={clinic.bookingPortal ? undefined : (e) => { e.preventDefault(); setPage('contact'); }}
+                className="w-full bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-3.5 rounded-xl text-sm shadow-md flex items-center justify-center gap-2"
+              >
+                Book Now
+                {clinic.bookingPortal && <ExternalLink className="w-4 h-4" />}
+              </a>
             </div>
           </div>
         )}
@@ -232,7 +243,7 @@ function AppShell({ clinic }) {
 
       <main className="flex-grow pb-16 md:pb-0">
         {page === 'home' && <Home setPage={setPage} />}
-        {page === 'services' && <Services setPage={setPage} />}
+        {page === 'services' && <Services />}
         {page === 'contact' && <Contact />}
       </main>
 

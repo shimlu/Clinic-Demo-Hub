@@ -33,13 +33,15 @@ export default function Home({ setPage }) {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                <button
-                  onClick={() => setPage('contact')}
+                <a
+                  href={clinic.bookingPortal || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-brand-accent hover:bg-brand-accentHover text-white text-base font-bold px-8 py-4 rounded-2xl shadow-lg shadow-brand-accent/20 transform hover:-translate-y-0.5 transition-all duration-200"
                 >
                   <Calendar className="w-5 h-5" />
-                  Book Appointment Online
-                </button>
+                  Book Now
+                </a>
                 <a
                   href={`tel:${clinic.phoneIntl}`}
                   className="inline-flex items-center justify-center gap-2 bg-white hover:bg-[#EFEAD6] text-brand-dark text-base font-bold px-8 py-4 rounded-2xl border border-brand-silver hover:border-brand-accent/50 shadow-sm transition-all duration-200"
@@ -178,13 +180,15 @@ export default function Home({ setPage }) {
               </div>
 
               <div className="pt-6 flex flex-wrap gap-4">
-                <button
-                  onClick={() => setPage('contact')}
+                <a
+                  href={clinic.bookingPortal || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand-dark hover:opacity-90 text-brand-gold font-bold px-6 py-3.5 rounded-xl transition-colors duration-200 shadow-sm"
                 >
-                  Schedule Your Visit
+                  Book Now
                   <ArrowRight className="w-4 h-4" />
-                </button>
+                </a>
                 <button
                   onClick={() => setPage('services')}
                   className="inline-flex items-center gap-2 bg-white border border-brand-silver hover:border-brand-accent text-brand-dark font-bold px-6 py-3.5 rounded-xl transition-colors duration-200"
@@ -269,12 +273,14 @@ export default function Home({ setPage }) {
                 <p className="text-sm font-bold text-brand-dark">Ready for your visit at {clinic.name}?</p>
                 <p className="text-xs text-slate-400">{clinic.openDays}, {clinic.hours}.</p>
               </div>
-              <button
-                onClick={() => setPage('contact')}
+              <a
+                href={clinic.bookingPortal || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-brand-dark hover:opacity-90 text-brand-gold font-bold text-xs px-5 py-3 rounded-xl transition-colors sm:ml-auto shadow-sm shrink-0"
               >
-                Book Appointment
-              </button>
+                Book Now
+              </a>
             </div>
           </div>
 

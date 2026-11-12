@@ -78,7 +78,7 @@ export const clinics = {
     lng: 123.1955,
     facebook: "https://www.facebook.com/smilerightnaga",
     instagram: "",
-    bookingPortal: "https://dental.m.mymedsph.app/dental/y2AsICGo",
+    bookingPortal: "https://dental.m.mymedsph.app/dental/y2AslCGo",
     payments: ["Cash", "GCash", "Visa", "Mastercard"],
     logo: "/smile-right-logo.jpg",
     landmarkMap: "",
