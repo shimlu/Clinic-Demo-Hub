@@ -9,9 +9,9 @@ export default {
       colors: {
         // Colors come from CSS variables so every clinic can have its own theme (see src/index.css + App.jsx)
         brand: {
-          light: '#f8fafc',
-          silver: '#e2e8f0',
-          slate: '#475569',
+          light: '#F6F2E4',
+          silver: '#E4DEC7',
+          slate: '#525D3F',
           dark: 'rgb(var(--brand-dark) / <alpha-value>)',
           cardDark: 'rgb(var(--brand-card) / <alpha-value>)',
           accent: 'rgb(var(--brand-accent) / <alpha-value>)',

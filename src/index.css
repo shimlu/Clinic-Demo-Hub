@@ -20,16 +20,16 @@
 
 /* Default theme variables (overridden per clinic at runtime in App.jsx) */
 :root {
-  --brand-dark: 10 12 16;
-  --brand-card: 20 24 32;
-  --brand-accent: 217 119 6;
-  --brand-accent-hover: 180 83 9;
-  --brand-gold: 234 179 8;
+  --brand-dark: 36 45 20;
+  --brand-card: 52 65 28;
+  --brand-accent: 93 112 49;
+  --brand-accent-hover: 74 90 38;
+  --brand-gold: 184 206 126;
 }
 
 /* Per-clinic branding gradients (follow the theme variables) */
 .brand-gradient-silver {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  background: linear-gradient(135deg, #F6F2E4 0%, #EFEAD6 50%, #E4DEC7 100%);
 }
 
 .brand-gradient-slate {

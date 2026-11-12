@@ -65,7 +65,7 @@ export const clinics = {
     addressLine1: "Ground Floor, Sundaze Hotel",
     addressLine2: "161 Maharlika Highway, Brgy. Concepcion Pequeña",
     shortAddress: "GF Sundaze Hotel, Maharlika Hwy, Concepcion Pequeña, Naga City",
-    landmark: "Along Maharlika Highway • Near Bicol Medical Center & SM City Naga",
+    landmark: "Sundaze Hotel • Beside Legazpi Eye Center",
     phoneDisplay: "0938 426 4797",
     phoneIntl: "+639384264797",
     email: "smilerightdcnaga@gmail.com",
@@ -82,9 +82,9 @@ export const clinics = {
     payments: ["Cash", "GCash", "Visa", "Mastercard"],
     logo: "/smile-right-logo.jpg",
     landmarkMap: "",
-    hero: "/hero_dentist.png",
-    portrait: "/dentist_portrait.png",
-    theme: { dark: "22 30 16", card: "33 45 24", accent: "107 142 35", accentHover: "85 115 26", gold: "163 204 74" },
+    hero: "/smile-right-clinic.jpg",
+    portrait: "/smile-right-checkup.jpg",
+    theme: { dark: "36 45 20", card: "52 65 28", accent: "93 112 49", accentHover: "74 90 38", gold: "184 206 126" },
   },
 
   // ----------------------------------------------------------------
@@ -123,5 +123,5 @@ export const clinics = {
   },
 };
 
-export const DEFAULT_CLINIC = "masterdent";
+export const DEFAULT_CLINIC = "smile-right";
 

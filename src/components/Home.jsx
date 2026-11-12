@@ -9,76 +9,95 @@ export default function Home({ setPage }) {
 
   return (
     <div className="animate-fade-in">
-      {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center text-white overflow-hidden bg-brand-dark">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={clinic.hero}
-            alt={`${clinic.name} ${clinic.suffix} in ${clinic.city}`}
-            className="w-full h-full object-cover object-center scale-105 filter brightness-75 contrast-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/85 to-brand-dark/40 z-10" />
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-brand-light to-transparent z-10" />
-        </div>
+      {/* Hero Section — Warm Cream & Olive Organic Design */}
+      <section className="relative min-h-[82vh] flex items-center overflow-hidden bg-brand-light border-b border-brand-silver">
+        {/* Subtle organic curved arcs inspired by Smile Right's brand graphics */}
+        <div className="pointer-events-none absolute -left-32 -top-32 w-[540px] h-[540px] rounded-full border-[48px] border-brand-accent/5" />
+        <div className="pointer-events-none absolute -left-12 top-16 w-[720px] h-[720px] rounded-full border-[36px] border-brand-accent/[0.04]" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-20 w-full">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-brand-gold/15 border border-brand-gold/40 text-brand-gold px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-md">
-              <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
-              {clinic.openDays}, {clinic.hours} • {clinic.city}
-            </div>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-              {clinic.tagline} in <span className="text-brand-gold">{clinic.city}</span>
-            </h1>
-
-            <p className="text-lg sm:text-xl text-slate-300 mb-8 font-light leading-relaxed">
-              Visit <strong className="text-white font-semibold">{clinic.name} {clinic.suffix}</strong> — {clinic.landmark}. Led by {clinic.dentistName} and our caring clinical team, we deliver honest consultations, gentle treatments, and attentive aftercare.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button
-                onClick={() => setPage('contact')}
-                className="inline-flex items-center justify-center gap-2 bg-brand-gold hover:opacity-90 text-brand-dark text-base font-extrabold px-8 py-4 rounded-xl shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
-              >
-                <Calendar className="w-5 h-5" />
-                Book Appointment Online
-              </button>
-              <a
-                href={`tel:${clinic.phoneIntl}`}
-                className="inline-flex items-center justify-center gap-2 bg-slate-900/85 hover:bg-slate-800 text-white text-base font-semibold px-8 py-4 rounded-xl border border-slate-700 hover:border-brand-gold/60 backdrop-blur-md transition-all duration-200"
-              >
-                <Phone className="w-5 h-5 text-brand-gold" />
-                Call / Text: {clinic.phoneDisplay}
-              </a>
-            </div>
-
-            <div className="border-t border-slate-700/60 pt-8 mt-8 grid grid-cols-2 sm:grid-cols-3 gap-6">
-              <div className="flex items-center gap-3">
-                <div className="flex text-brand-gold">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-current" />
-                  ))}
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-white leading-none">{clinic.rating} / 5.0 Rated</p>
-                  <p className="text-xs text-slate-400 mt-1">Trusted in {clinic.city}</p>
-                </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20 relative z-20 w-full">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            {/* Left: Typography & CTAs */}
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-2 bg-brand-accent/10 border border-brand-accent/25 text-brand-accent px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                {clinic.openDays}, {clinic.hours} • {clinic.city}
               </div>
 
-              <div className="flex items-center gap-3">
-                <Award className="w-8 h-8 text-brand-gold shrink-0" />
-                <div>
-                  <p className="text-sm font-bold text-white leading-none">7 Dental Specialties</p>
-                  <p className="text-xs text-slate-400 mt-1">Complete Family Care</p>
-                </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-dark mb-6 leading-[1.08]">
+                {clinic.tagline} in <span className="text-brand-accent">{clinic.city}</span>
+              </h1>
+
+              <p className="text-lg sm:text-xl text-brand-slate mb-8 font-normal leading-relaxed max-w-2xl">
+                Visit <strong className="text-brand-dark font-bold">{clinic.name} {clinic.suffix}</strong> — {clinic.landmark}. Led by {clinic.dentistName} and our caring clinical team, we deliver honest consultations, gentle treatments, and attentive aftercare.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                <button
+                  onClick={() => setPage('contact')}
+                  className="inline-flex items-center justify-center gap-2 bg-brand-accent hover:bg-brand-accentHover text-white text-base font-bold px-8 py-4 rounded-2xl shadow-lg shadow-brand-accent/20 transform hover:-translate-y-0.5 transition-all duration-200"
+                >
+                  <Calendar className="w-5 h-5" />
+                  Book Appointment Online
+                </button>
+                <a
+                  href={`tel:${clinic.phoneIntl}`}
+                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-[#EFEAD6] text-brand-dark text-base font-bold px-8 py-4 rounded-2xl border border-brand-silver hover:border-brand-accent/50 shadow-sm transition-all duration-200"
+                >
+                  <Phone className="w-5 h-5 text-brand-accent" />
+                  Call / Text: {clinic.phoneDisplay}
+                </a>
               </div>
 
-              <div className="col-span-2 sm:col-span-1 flex items-center gap-3">
-                <ShieldCheck className="w-8 h-8 text-emerald-400 shrink-0" />
-                <div>
-                  <p className="text-sm font-bold text-white leading-none">{clinic.open7Days ? 'Open 7 Days a Week' : clinic.openDays}</p>
-                  <p className="text-xs text-slate-400 mt-1">{clinic.hours}</p>
+              <div className="border-t border-brand-silver pt-7 grid grid-cols-2 sm:grid-cols-3 gap-6">
+                <div className="flex items-center gap-3">
+                  <div className="flex text-brand-accent">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-current" />
+                    ))}
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-brand-dark leading-none">{clinic.rating} / 5.0 Rated</p>
+                    <p className="text-xs text-brand-slate mt-1">Trusted in {clinic.city}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Award className="w-8 h-8 text-brand-accent shrink-0" />
+                  <div>
+                    <p className="text-sm font-bold text-brand-dark leading-none">7 Dental Specialties</p>
+                    <p className="text-xs text-brand-slate mt-1">Complete Family Care</p>
+                  </div>
+                </div>
+
+                <div className="col-span-2 sm:col-span-1 flex items-center gap-3">
+                  <ShieldCheck className="w-8 h-8 text-brand-accent shrink-0" />
+                  <div>
+                    <p className="text-sm font-bold text-brand-dark leading-none">{clinic.open7Days ? 'Open 7 Days a Week' : clinic.openDays}</p>
+                    <p className="text-xs text-brand-slate mt-1">{clinic.hours}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Framed Clinic Visual */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#FBF9F1]">
+                <img
+                  src={clinic.hero}
+                  alt={`${clinic.name} ${clinic.suffix} in ${clinic.city}`}
+                  className="w-full h-[380px] sm:h-[460px] object-cover object-right"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent p-6 text-white">
+                  <div className="flex items-center gap-3">
+                    <div className="w-11 h-11 rounded-xl bg-brand-dark border border-brand-gold/40 p-1 shrink-0 overflow-hidden">
+                      <img src={clinic.logo} alt={`${clinic.name} logo`} className="w-full h-full object-contain rounded-lg" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-sm leading-tight">{clinic.addressLine1}</p>
+                      <p className="text-xs text-brand-gold font-medium mt-0.5">{clinic.landmark}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
