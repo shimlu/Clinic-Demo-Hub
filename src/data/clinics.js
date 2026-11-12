@@ -53,6 +53,41 @@ export const clinics = {
   },
 
   // ----------------------------------------------------------------
+  // CLINIC #2  (Smile Right Dental Clinic - Naga, from public FB page)
+  // ----------------------------------------------------------------
+  "smile-right": {
+    name: "Smile Right",
+    suffix: "Dental Clinic",
+    tagline: defaultServicesNote,
+    city: "Naga City",
+    region: "Camarines Sur",
+    postalCode: "4400",
+    addressLine1: "Ground Floor, Sundaze Hotel",
+    addressLine2: "161 Maharlika Highway, Brgy. Concepcion Pequeña",
+    shortAddress: "GF Sundaze Hotel, Maharlika Hwy, Concepcion Pequeña, Naga City",
+    landmark: "Along Maharlika Highway • Near Bicol Medical Center & SM City Naga",
+    phoneDisplay: "0938 426 4797",
+    phoneIntl: "+639384264797",
+    email: "smilerightdcnaga@gmail.com",
+    dentistName: "our lead dentist",
+    hours: "10:00 AM - 6:00 PM",
+    openDays: "Open Daily (Mon - Sun)",
+    open7Days: true,
+    rating: "5.0",
+    lat: 13.6145,
+    lng: 123.1955,
+    facebook: "https://www.facebook.com/smilerightnaga",
+    instagram: "",
+    bookingPortal: "https://dental.m.mymedsph.app/dental/y2AsICGo",
+    payments: ["Cash", "GCash", "Visa", "Mastercard"],
+    logo: "/smile-right-logo.jpg",
+    landmarkMap: "",
+    hero: "/hero_dentist.png",
+    portrait: "/dentist_portrait.png",
+    theme: { dark: "22 30 16", card: "33 45 24", accent: "107 142 35", accentHover: "85 115 26", gold: "163 204 74" },
+  },
+
+  // ----------------------------------------------------------------
   // TEMPLATE: copy this block for every new lead
   // ----------------------------------------------------------------
   "sample-clinic": {
